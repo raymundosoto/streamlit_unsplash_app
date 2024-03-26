@@ -44,7 +44,7 @@ st.subheader("App creada por Raymundo Soto Soto")
 
 # Botón para obtener imágenes nuevas
 if st.button("Obtener imágenes nuevas"):
-    categories = ["Astronomía", "Animals", "Naturaleza", "Calles", "Amor", "Comida"]
+    categories = ["Astronomía", "Animals", "Nature", "Calles", "Amor", "Comida"]
     st.text("Descargando imágenes...")  # Mostrar mensaje de descarga inicial
 
     for category in categories:
@@ -72,7 +72,7 @@ with Animales:
     st.image("Animals.jpg", caption="Animales")
 
 with Naturaleza:
-    st.image("naturaleza.jpg", caption="Naturaleza")
+    st.image("Nature.jpg", caption="Naturaleza")
 
 with Calles:
     st.image("Calles.jpg", caption="Fotografía Callejera")
