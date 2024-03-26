@@ -40,6 +40,7 @@ def unsplash_api_search(query):
 # Interfaz de usuario con Streamlit
 st.title("App Unsplash")
 st.subheader("Esta app muestra imágenes obtenidas de Unsplash.com")
+st.subheader("App creada por Raymundo Soto Soto")
 
 # Botón para obtener imágenes nuevas
 if st.button("Obtener imágenes nuevas"):
