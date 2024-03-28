@@ -40,15 +40,15 @@ def unsplash_api_search(query):
 # Interfaz de usuario con Streamlit
 st.title("App Unsplash")
 st.subheader("Esta app muestra imágenes obtenidas de Unsplash.com")
-st.subheader("App creada por Raymundo Soto Soto")
+st.subheader("App creada por Raymundo S")
 
 # Botón para obtener imágenes nuevas
 if st.button("Obtener imágenes nuevas"):
-    categories = ["Astronomía", "Animals", "Nature", "Calles", "Amor", "Comida"]
+    categories = ["Estrellas","Astronomía", "Animals", "Nature", "Calles", "Amor", "Comida"]
     st.text("Descargando imágenes...")  # Mostrar mensaje de descarga inicial
 
     for category in categories:
-        #st.text(f"Descargando imagen de la categoría '{category}'...")
+        st.text(f"Descargando imagen de la categoría '{category}'...")
         results_url = unsplash_api_search(category)
         if not results_url:
             st.write(f'Error al descargar imagen para la categoría: {category}')
@@ -63,7 +63,9 @@ if st.button("Obtener imágenes nuevas"):
     st.text("Descarga completada")  # Mostrar mensaje de descarga completada
 
 # Mostrar pestañas con imágenes estáticas
-Astronomia, Animales, Naturaleza, Calles, Amor, Comida = st.tabs(["Astronomía", "Animales", "Naturaleza", "Calles", "Amor", "Comida"])
+Estrellas, Astronomia, Animales, Naturaleza, Calles, Amor, Comida = st.tabs(["Estrellas","Astronomía", "Animales", "Naturaleza", "Calles", "Amor", "Comida"])
+with Estrellas:
+    st.image("Estrellas.jpg", caption="Imágenes de estrellas")
 
 with Astronomia:
     st.image("Astronomía.jpg", caption="Astronomía")
@@ -78,7 +80,7 @@ with Calles:
     st.image("Calles.jpg", caption="Fotografía Callejera")
 
 with Amor:
-    st.image("Amor.jpg", caption="Película")
+    st.image("Amor.jpg", caption="Amor")
 
 with Comida:
     st.image("Comida.jpg", caption="Comida")
